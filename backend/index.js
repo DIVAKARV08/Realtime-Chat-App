@@ -6,10 +6,12 @@ const io = require("socket.io")(server, {
   },
 });
 const router = require("./routes");
+const cors = require("cors");
 const { addUser, removeUser, getUsersinRoom, getUser } = require("./users");
 
 const PORT = process.env.PORT || 5001;
 App.use(router);
+App.use(cors());
 
 io.on("connection", (socket) => {
   console.log("connected to socket");
@@ -30,9 +32,10 @@ io.on("connection", (socket) => {
     });
     socket.join(user.room);
 
-    io
-      .to(user.room)
-      .emit("roomData", { room: user.room, users: getUsersinRoom(user.room) });
+    io.to(user.room).emit("roomData", {
+      room: user.room,
+      users: getUsersinRoom(user.room),
+    });
     callback();
   });
 
