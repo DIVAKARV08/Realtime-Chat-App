@@ -1,0 +1,34 @@
+.messageContainer {
+  display: flex;
+  flex-direction: row;
+  margin: 5px;
+}
+.sentText {
+  display: flex;
+  color: rgb(148, 148, 148);
+  font-size: 1em;
+}
+.pr-10 {
+  padding-right: 10px;
+}
+.pl-10 {
+  padding-left: 10px;
+}
+.messageText {
+  display: flex;
+  flex: 0.8;
+}
+.messageBox {
+  padding: 4px 8px;
+  border-radius: 20px;
+}
+.backgroundBlue {
+  color: white;
+  background-color: rgb(51, 0, 153);
+}
+.backgroundLight {
+  background-color: rgb(220, 220, 220);
+}
+.justifyEnd {
+  justify-content: flex-end;
+}

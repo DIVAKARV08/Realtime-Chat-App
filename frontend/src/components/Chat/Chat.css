@@ -1,0 +1,30 @@
+.outerChatContainer{
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgb(60, 1, 52) 41%,
+    rgb(0, 54, 65) 100%
+  );
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+    height: 65%;
+    background-color: #f2f2f2;
+    border-radius: 3px;
+    position: relative;
+}
+
+@media only screen and (max-width: 800px) {
+ .container{
+  width: 80%;
+  height: 75%;
+ }
+}

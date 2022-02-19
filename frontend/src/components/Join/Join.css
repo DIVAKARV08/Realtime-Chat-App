@@ -1,0 +1,66 @@
+.joinOuterContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(87, 0, 75, 1) 41%,
+    rgba(0, 212, 255, 1) 100%
+  );
+}
+
+.joinInnerContainer {
+  display: flex;
+  flex-direction: column;
+  width: 22%;
+  height: 30%;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  position: relative;
+}
+.heading {
+  display: flex;
+  justify-content: center;
+  background-color: black;
+  color: white;
+  padding: 5px;
+  font-size: 30px;
+  border-radius: 5px;
+}
+.InputElements {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.InputElements > input {
+  width: 75%;
+  margin: 10px 0;
+  padding: 9px 3px;
+  border:1px solid #ccc;
+  border-radius: 5px;
+}
+
+.joinButton {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 75%;
+  position: absolute;
+  bottom: 5px;
+  text-decoration: none;
+}
+
+.joinButton > button {
+  width: 100%;
+  padding: 9px 3px;
+  color: white;
+  background-color: rgb(7, 115, 232);
+  outline: none;
+  border:none;
+  border-radius: 5px;
+}

@@ -1,0 +1,31 @@
+.Inputform {
+  position: absolute;
+  bottom: 2px;
+  padding: 1%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 98%;
+}
+
+.Inputform > .inputText {
+  display: flex;
+  flex: 0.8;
+  border: 1px solid #ccc;
+  outline: none;
+  border-radius: 5px;
+  padding: 10px 5px;
+}
+
+.Inputform > .sendButton {
+  display: flex;
+  flex: 0.2;
+  padding: 10px 5px;
+  color: white;
+  background-color: rgb(7, 115, 232);
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  align-items: center;
+  justify-content: center;
+}
