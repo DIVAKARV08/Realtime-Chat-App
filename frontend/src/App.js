@@ -7,8 +7,8 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" exact element={<Join />} />
-        <Route path="/chat" exact element={<Chat />} />
+        <Route path="/"  element={<Join />} />
+        <Route path="/chat/:name/:room"  element={<Chat />} />
       </Routes>
     </Router>
   );

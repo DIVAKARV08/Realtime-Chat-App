@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import queryString from "query-string";
+import { useParams } from 'react-router';
 import io from "socket.io-client";
 import Infobar from "../Infobar/Infobar";
 import "./Chat.css";
@@ -15,12 +16,13 @@ const Chat = () => {
   const [messages, setMessages] = useState([]);
   const ENDPOINT = "https://realtime-chat-app-v1.herokuapp.com/";
 
+  const parms=useParams();
   useEffect(() => {
-    const { name, room } = queryString.parse(window.location.search);
-
+    // const { name, room } = queryString.parse(window.location.search);
+    
     socketio = io(ENDPOINT);
-    setName(name);
-    setRoom(room);
+    setName(parms.name);
+    setRoom(parms.room);
 
     socketio.emit("join", { name, room }, (error) => {
       if (error) {
@@ -28,11 +30,7 @@ const Chat = () => {
       }
     });
 
-    // return () => {
-    //   socketio.emit("disconnect");
-    //   socketio.off();
-    // };
-  }, [ENDPOINT, window.location.search]);
+  }, [ENDPOINT]);
 
   useEffect(() => {
     socketio.on("message", (message) => {
