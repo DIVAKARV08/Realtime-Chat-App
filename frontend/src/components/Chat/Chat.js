@@ -19,11 +19,11 @@ const Chat = () => {
   const parms=useParams();
   useEffect(() => {
     // const { name, room } = queryString.parse(window.location.search);
+    const {name,room}=parms;
     
     socketio = io(ENDPOINT);
-    setName(parms.name);
-    setRoom(parms.room);
-
+    setName(name);
+    setRoom(room);
     socketio.emit("join", { name, room }, (error) => {
       if (error) {
         alert(error);
